@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Publications - Julian Bellavita</title>
+  <meta name="description" content="Publications by Julian Bellavita" />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111111;
+      --muted:#555555;
+      --border:#e6e6e6;
+      --btn:#111111;
+      --btnText:#ffffff;
+      --max: 980px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.45;
+    }
+    a{ color:inherit; text-decoration:underline; text-underline-offset: 3px; }
+    a:hover{ opacity:0.85; }
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 20px 56px;
+    }
+
+    /* Navigation */
+    nav{
+      display:flex;
+      gap: 24px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    nav a{
+      text-decoration:none;
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    nav a:hover{ color: var(--text); }
+    nav a.active{ color: var(--text); font-weight: 600; }
+
+    /* Header */
+    header{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:18px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 22px;
+      margin-bottom: 30px;
+    }
+    .title h1{
+      margin:0;
+      font-size: 40px;
+      letter-spacing: -0.5px;
+      line-height:1.1;
+    }
+    .title h2{
+      margin:8px 0 0;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .actions{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap:10px;
+      min-width: 180px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--btn);
+      color: var(--btnText);
+      text-decoration:none;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.3px;
+      border: 1px solid var(--btn);
+      white-space:nowrap;
+    }
+    .btn:hover{ opacity:0.9; }
+    .contact{
+      font-size: 14px;
+      color: var(--muted);
+      text-align:right;
+    }
+
+    /* Sections */
+    section{
+      margin-top: 28px;
+      padding-top: 10px;
+    }
+    section h3{
+      margin: 0 0 12px 0;
+      font-size: 22px;
+      letter-spacing:-0.2px;
+    }
+    .pubs p{
+      margin: 0 0 10px 0;
+      color: var(--text);
+    }
+    footer{
+      margin-top: 42px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 800px){
+      header{ flex-direction:column; }
+      .actions{ align-items:flex-start; min-width: auto; }
+      .contact{ text-align:left; }
+      nav{ flex-wrap: wrap; gap: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap" id="top">
+    <nav>
+      <a href="index.html">About</a>
+      <a href="publications.html" class="active">Publications</a>
+    </nav>
+
+    <header>
+      <div class="title">
+        <h1>Julian Bellavita</h1>
+        <h2>Computer Science PhD Student at Cornell</h2>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="cv.pdf" download>
+          DOWNLOAD CV
+        </a>
+
+        <div class="contact">
+          Email: <a href="mailto:jbellavita@cs.cornell.edu">jbellavita@cs.cornell.edu</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="pubs" id="publications">
+        <h3>Publications</h3>
+
+        <p>
+          <strong>Julian Bellavita</strong>, Thomas Pasquali, Laura Del Rio Martin, Flavio Vella, and Giulia Guidi. 2025.
+          <em>"Popcorn: Accelerating Kernel K-means on GPUs through Sparse Linear Algebra".</em>
+          In The 30th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming (<strong>PPoPP 2025</strong>).
+        </p>
+
+        <p>
+          Thomas McFarland, <strong>Julian Bellavita</strong>, and Giulia Guidi. 2025.
+          <em>"Parallel GPU-Enabled Algorithms for SpGEMM on Arbitrary Semirings with Hybrid Communication".</em>
+          Short paper. In Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering (<strong>ICPE 2025</strong>).
+        </p>
+
+        <p>
+          Adrián Castelló, <strong>Julian Bellavita</strong>, Grace Dinh, Yuka Ikarashi, Hector Martínez.
+          <em>"Tackling the Matrix Multiplication Micro-Kernel Generation with Exo".</em>
+          In IEEE/ACM International Symposium on Code Generation and Optimization (<strong>CGO 2024</strong>).
+        </p>
+
+        <p>
+          <strong>Julian Bellavita</strong>, Mathias Jacquelin, Esmond G. Ng, Dan Bonachea, Johnny Corbino, and Paul H. Hargrove.
+          <em>"symPACK: A GPU-Capable Fan-Out Sparse Cholesky Solver".</em>
+          In Workshops of The International Conference on High Performance Computing, Network, Storage, and Analysis (<strong>SC-W 2023</strong>).
+        </p>
+
+        <p>
+          <strong>Julian Bellavita</strong>, Caitlin Sim, Kesheng Wu, Alex Sim, Shinjae Yoo, Hiro Ito, Vincent Garonne, Eric Lancon.
+          <em>"Understanding Data Access Patterns for dCache System".</em>
+          In 26th International Conference on Computing in High Energy &amp; Nuclear Physics (<strong>CHEP 2023</strong>).
+        </p>
+
+        <p>
+          <strong>Julian Bellavita</strong>, Alex Sim, Kesheng Wu, Inder Monga, Chin Guok, Frank Würthwein, and Diego Davila. 2022.
+          <em>"Studying Scientific Data Lifecycle in On-demand Distributed Storage Caches".</em>
+          In Fifth International Workshop on Systems and Network Telemetry and Analytics (<strong>SNTA 2022</strong>).
+        </p>
+      </section>
+
+      <section class="pubs" id="talks">
+        <h3>Talks</h3>
+
+        <p>
+          <em>"Block Leverage Scores for Cache-Friendly Randomized CP Decomposition"</em>,
+          RNLA Workshop at IPAM, 2025
+        </p>
+
+        <p>
+          <em>"Algorithms for Computing a Tensor Times Matrix Chain in Mixed Precision"</em>,
+          Oak Ridge National Laboratory Discrete Algorithms Group Seminar, 2025
+        </p>
+
+        <p>
+          <em>"Multi-GPU Communication Schemes for Large-Scale Supercomputers"</em>,
+          Cornell Systems Seminar, 2024
+        </p>
+
+        <p>
+          <em>"Accelerating High-Dimensional K-Means Clustering on GPUs with Sparse Matrix Multiplication"</em>,
+          University of Trento, 2024
+        </p>
+
+        <p>
+          <em>"RDMA-Based Algorithms for Sparse Matrix Multiplication on GPUs"</em>,
+          Cornell HPC Group, 2024
+        </p>
+
+        <p>
+          <em>"Portable code generation and semi-automatic scheduling for BLIS microkernels with Exo"</em>,
+          BLIS Retreat, 2022
+        </p>
+      </section>
+
+      <section class="pubs" id="posters">
+        <h3>Posters</h3>
+
+        <p>
+          <em>"Forward Error Bounds and Efficient Algorithms for Computing a Tensor Times Matrix Chain in Low Precision on GPUs"</em>,
+          ACM Student Research Competition at SC, 2025
+        </p>
+
+        <p>
+          <em>"Mixed Precision Algorithms for Computing the Tucker Decomposition"</em>,
+          CSGF Program Review, 2025
+        </p>
+
+        <p>
+          <em>"Efficient Large-Scale Multi-GPU Clustering using Sparse Linear Algebra"</em>,
+          IPDPS PhD Forum, 2025
+        </p>
+      </section>
+    </main>
+
+  </div>
+</body>
+</html>

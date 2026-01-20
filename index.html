@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Julian Bellavita</title>
+  <meta name="description" content="Julian Bellavita — Computer Science PhD Student at Cornell" />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111111;
+      --muted:#555555;
+      --border:#e6e6e6;
+      --btn:#111111;
+      --btnText:#ffffff;
+      --max: 980px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.45;
+    }
+    a{ color:inherit; text-decoration:underline; text-underline-offset: 3px; }
+    a:hover{ opacity:0.85; }
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 20px 56px;
+    }
+
+    /* Header */
+    header{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:18px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 22px;
+      margin-bottom: 30px;
+    }
+    .title h1{
+      margin:0;
+      font-size: 40px;
+      letter-spacing: -0.5px;
+      line-height:1.1;
+    }
+    .title h2{
+      margin:8px 0 0;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .actions{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap:10px;
+      min-width: 180px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--btn);
+      color: var(--btnText);
+      text-decoration:none;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.3px;
+      border: 1px solid var(--btn);
+      white-space:nowrap;
+    }
+    .btn:hover{ opacity:0.9; }
+    .contact{
+      font-size: 14px;
+      color: var(--muted);
+      text-align:right;
+    }
+    .iconRow{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:flex-end;
+    }
+    .iconLink{
+      display:inline-flex;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      border:1px solid var(--border);
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+    }
+    .iconLink img{
+      width:18px;
+      height:18px;
+      display:block;
+    }
+
+    /* Navigation */
+    nav{
+      display:flex;
+      gap: 24px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    nav a{
+      text-decoration:none;
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    nav a:hover{ color: var(--text); }
+    nav a.active{ color: var(--text); font-weight: 600; }
+
+    /* Main hero content */
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 26px;
+      align-items:start;
+      margin-bottom: 34px;
+    }
+    .bio p{
+      margin: 0 0 12px 0;
+      font-size: 16px;
+    }
+    .bio .muted{ color: var(--muted); }
+    .portrait{
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow:hidden;
+      background:#fafafa;
+    }
+    .portrait img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+
+    /* Sections */
+    section{
+      margin-top: 28px;
+      padding-top: 10px;
+    }
+    section h3{
+      margin: 0 0 12px 0;
+      font-size: 22px;
+      letter-spacing:-0.2px;
+    }
+    .pubs p{
+      margin: 0 0 10px 0;
+      color: var(--text);
+    }
+    .eduGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .card{
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 16px 14px;
+      background: #fff;
+    }
+    .card h4{
+      margin:0 0 6px 0;
+      font-size: 16px;
+    }
+    .card .line{ margin: 0; color: var(--muted); }
+    footer{
+      margin-top: 42px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 800px){
+      header{ flex-direction:column; }
+      .actions{ align-items:flex-start; min-width: auto; }
+      .contact{ text-align:left; }
+      .hero{ grid-template-columns: 1fr; }
+      .eduGrid{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap" id="top">
+    <nav>
+      <a href="index.html" class="active">About</a>
+      <a href="publications.html">Publications</a>
+    </nav>
+
+    <header>
+      <div class="title">
+        <h1>Julian Bellavita</h1>
+        <h2>Computer Science PhD Student at Cornell</h2>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="cv.pdf" download>
+          DOWNLOAD CV
+        </a>
+
+        <div class="contact">
+          Email: <a href="mailto:jbellavita@cs.cornell.edu">jbellavita@cs.cornell.edu</a>
+        </div>
+
+        <a href="https://www.linkedin.com/in/julian-bellavita-5876551ba/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="bio">
+          <p>
+            I am a Computer Science PhD student at Cornell advised by Dr. Giulia Guidi. I have a BA in CS from UC Berkeley,
+            and I previously worked at Lawrence Berkeley National Laboratory.
+          </p>
+          <p>
+            I work on implementing fast distributed sparse linear algebra kernels on heterogeneous HPC systems
+            and on using sparse linear algebra to parallelize clustering algorithms (and some other things).
+          </p>
+          <p class="muted">
+            I am supported by a Department of Energy Computational Science Graduate Fellowship.
+          </p>
+          <p class="muted">
+            You can email me at <a href="mailto:jbellavita@cs.cornell.edu">jbellavita@cs.cornell.edu</a>
+          </p>
+        </div>
+
+        <div class="portrait" aria-label="Portrait">
+          <img
+            src="aurorora.jpg"
+            alt="Julian Bellavita portrait"
+            loading="lazy"
+          />
+          <p class="muted">
+            This is a picture of me inside of the Aurora supercomputer at Argonne National Lab.
+          </p>
+        </div>
+      </div>
+
+      <section id="education">
+        <h3>Education</h3>
+        <div class="eduGrid">
+          <div class="card">
+            <h4>Cornell University</h4>
+            <p class="line">PhD, Computer Science</p>
+            <p class="line">2023–Present</p>
+          </div>
+
+          <div class="card">
+            <h4>University of California, Berkeley</h4>
+            <p class="line">B.A. Computer Science</p>
+            <p class="line">2019–2023</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <!--
+    Notes:
+    - Replace the LinkedIn href="#" with your real LinkedIn profile URL.
+    - The icon + portrait src URLs above are placeholders because Wix pages often serve images through dynamic, script-driven URLs.
+      If you want, I can pull the exact image file URLs by inspecting the page deeper and update this HTML to use them directly.
+  -->
+</body>
+</html>
+
